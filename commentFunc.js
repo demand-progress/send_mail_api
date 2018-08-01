@@ -18,7 +18,6 @@ const postComment = (reqBody) => {
                 console.log('form submitted')
                 form.click()
             },  (await page.$x('/html/body/div[3]/div[2]/div[2]/div[3]/div/div[3]/div[1]/form/div[5]/span/button'))[0])
-        
             // await page.click('#gwt-uid-250')
             // await page.click('#gwt-uid-385')
             // await page.waitFor(3000)
