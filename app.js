@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // app.use(cors(corsOptions));
 // app.options('*', cors());
-app.use(cors());
+// app.use(cors());
 app.options('*', cors());
 
 routes(app);
