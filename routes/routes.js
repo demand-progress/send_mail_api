@@ -5,7 +5,7 @@ var appRouter = function (app) {
       res.status(200).send("Welcome to our restful API");
     });
     app.post("/comment", function(req, res) {
-        postComment(req.body).then((answer) => res.send(answer))  
+        return postComment(req.body).then((answer) => res.send(answer))  
       });
   }
   
