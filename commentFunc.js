@@ -30,7 +30,7 @@ const postComment = (reqBody) => {
             await browser.close();
             await resolve('completed')
             }  catch (error) {
-                console.log(error);
+                reject(error);
                 browser.close();
             }
       });
