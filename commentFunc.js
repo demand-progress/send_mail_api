@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 const postComment = (reqBody) => {
     return new Promise(async (resolve, reject) => {
         const { first_name, last_name, email, zip } = reqBody
-        const browser = await puppeteer.launch({headless: false})
+        const browser = await puppeteer.launch({headless: true})
         const page = await browser.newPage()
         try {
             await page.goto('https://www.regulations.gov/comment?D=USBC-2018-0005-0001', { waitUntil: 'networkidle0' })
