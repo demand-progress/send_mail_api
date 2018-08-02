@@ -7,14 +7,14 @@ const cors = require('cors');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// const corsOptions = {
-//     origin: 'http://localhost:8008/demo.html',
-//     optionsSuccessStatus: 200,
-// };
+const corsOptions = {
+    origin: 'http://localhost:8008',
+    optionsSuccessStatus: 200,
+};
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 
-app.use(cors());
+// app.use(cors());
 app.options('*', cors());
 
 routes(app);
