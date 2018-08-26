@@ -1,9 +1,14 @@
-const postComment = require('../commentFunc.js');
+const getWord = require('../getWord.js');
 
 const appRouter = (app) => {
   app.get('/', (req, res) => {
-    res.status(200).send('Welcome to our restful API');
+    let { difficulty, start, count } = req.query;
+    getWord(difficulty, start, count).then((data) => {
+        res.status(200).send(data);
+      }  
+    ).catch(((error) => {
+      res.send(error)
+    })) 
   });
-  app.post('/comment', (req, res) => postComment(req.body).then(answer => res.send(answer)));
 };
 module.exports = appRouter;

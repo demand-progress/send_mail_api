@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const corsOptions = {
-  origin: 'https://freedomfrombigtech.com',
+  origin: 'http://localhost:3000/',
   optionsSuccessStatus: 200,
 };
 
