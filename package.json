@@ -1,5 +1,5 @@
 {
-  "name": "APICaller",
+  "name": "wordAPI",
   "engines": {
     "node": "8.3.0"
   },
