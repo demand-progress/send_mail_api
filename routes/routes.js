@@ -4,11 +4,10 @@ const appRouter = (app) => {
   app.get('/', (req, res) => {
     const { difficulty, start, count } = req.query;
     getWord(difficulty, start, count).then((data) => {
-        res.status(200).send(data);
-      }  
-    ).catch(((error) => {
-      res.send(error)
-    })) 
+      res.status(200).send(data);
+    }).catch(((error) => {
+      res.send(error);
+    }));
   });
 };
 module.exports = appRouter;
