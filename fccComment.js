@@ -28,18 +28,18 @@ const getStateAndCity = zip => new Promise(async (resolve, reject) => {
 const postFccComment = reqBody => new Promise(
   async (resolve, reject) => {
     const {
-      first_name, 
-      last_name, 
-      email, 
-      address1, 
-      zip, 
+      first_name,
+      last_name,
+      email,
+      address1,
+      zip,
       fcc_comment,
     } = reqBody;
 
     const cityStateObj = await getStateAndCity(zip);
     const { state, city } = cityStateObj;
     const key = process.env.fccCommentKey ? process.env.fccCommentKey : keys.fccKey;
-    
+
     axios({
       method: 'post',
       url: `https://publicapi.fcc.gov/ecfs/filings?api_key=${key}`,
@@ -66,7 +66,13 @@ const postFccComment = reqBody => new Promise(
         text_data: fcc_comment,
         express_comment: 1,
       },
-    });
+    })
+      .then((response) => {
+        resolve(response.data.status);
+      })
+      .catch((error) => {
+        reject(error);
+      });
   },
 );
 
