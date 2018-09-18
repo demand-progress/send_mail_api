@@ -10,7 +10,7 @@ const appRouter = (app) => {
     }));
   });
 
-  app.post('/ftccomment', (req, res) => {
+  app.post('/fcccomment', (req, res) => {
     postFccComment(req.body)
       .then(answer => res.send(answer))
       .catch(error => console.log(error));
