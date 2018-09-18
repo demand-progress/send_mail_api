@@ -38,10 +38,11 @@ const postFccComment = reqBody => new Promise(
 
     const cityStateObj = await getStateAndCity(zip);
     const { state, city } = cityStateObj;
-
+    const key = process.env.fccCommentKey ? process.env.fccCommentKey : keys.fccKey;
+    
     axios({
       method: 'post',
-      url: `https://publicapi.fcc.gov/ecfs/filings?api_key=${keys.fccKey}`,
+      url: `https://publicapi.fcc.gov/ecfs/filings?api_key=${key}`,
       data: {
         proceedings: [
           {
