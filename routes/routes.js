@@ -1,4 +1,4 @@
-const getWord = require('../getWord.js');
+const postFccComment = require('../fccComment.js');
 
 const appRouter = (app) => {
   app.get('/', (req, res) => {
@@ -8,6 +8,12 @@ const appRouter = (app) => {
     }).catch(((error) => {
       res.send(error);
     }));
+  });
+
+  app.post('/ftccomment', (req, res) => {
+    postFccComment(req.body)
+      .then(answer => res.send(answer))
+      .catch(error => console.log(error));
   });
 };
 module.exports = appRouter;
