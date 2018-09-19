@@ -1,6 +1,9 @@
 const axios = require('axios');
 const { parseString } = require('xml2js');
-const keys = require('./config/key.js');
+let keys = ''; 
+if(!process.env.fccCommentKey) {
+  keys = require('./config/key.js');
+}
 
 const getStateAndCity = zip => new Promise(async (resolve, reject) => {
   axios.get('https://secure.shippingapis.com/ShippingAPI.dll?', {
