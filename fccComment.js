@@ -49,9 +49,9 @@ const postFccComment = reqBody => new Promise(
       data: {
         proceedings: [
           {
-            // bureau_code: 'WTB',
-            // bureau_name: 'Wireless Telecommunications Bureau',
-            // name: '18-197',
+            bureau_code: 'WTB',
+            bureau_name: 'Wireless Telecommunications Bureau',
+            name: '18-197',
           },
         ],
         filers: [
