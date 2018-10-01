@@ -8,7 +8,7 @@ const routes = require('./routes/routes.js');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var whitelist = ['http://nomobilemegamerger.com', 'http://localhost:8008']
+var whitelist = ['https://nomobilemegamerger.com', 'http://localhost:8008']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
