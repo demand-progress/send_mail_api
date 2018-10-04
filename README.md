@@ -1,4 +1,4 @@
-# API caller backend
+# API send mail backend
 Build with node.js and heroku
 
-Currently makes post request to ftc comment api
+sends email to folks via an api call
