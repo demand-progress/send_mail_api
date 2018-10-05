@@ -4,7 +4,7 @@ let mailGunDomainKey;
 let mailgunApiKey;
 
 if (!process.env.MAILGUN_API_KEY) {
-  const { mailGunDomain, mailgunApi } = require('./config/key.js');
+  const { mailGunDomain, mailgunApi } = require('./config/keys.js');
   mailGunDomainKey = mailGunDomain;
   mailgunApiKey = mailgunApi;
 }
