@@ -17,7 +17,7 @@ const sendEmail = toEmail => new Promise(
     const mailgun = new Mailgun({ apiKey: apiKeyz, domain: domainz });
 
     const data = {
-      from: 'mateo@demandprogress.org',
+      from: 'progressivepipelineproject@gmail.com',
       to: toEmail,
       subject: 'Progressive Talent Pipeline has received your application',
       text: 'If you have any questions feel free to reach out to us at progressivepipelineproject@gmail.com',
