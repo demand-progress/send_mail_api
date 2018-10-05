@@ -19,10 +19,10 @@ const sendEmail = toEmail => new Promise(
     const data = {
       from: 'mateo@demandprogress.org',
       to: toEmail,
-      subject: 'Progress Pipeline has received your application',
-      text: 'If you have any questions or concerns please reach out to us',
+      subject: 'Progressive Talent Pipeline has received your application',
+      text: 'If you have any questions feel free to reach out to us at progressivepipelineproject@gmail.com',
     };
-    console.log('on line 25 ',data);
+
     // Sending the email
     mailgun.messages().send(data, (error, body) => {
       if (error) {
