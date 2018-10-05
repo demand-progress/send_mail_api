@@ -22,7 +22,7 @@ const sendEmail = toEmail => new Promise(
       subject: 'Progress Pipeline has received your application',
       text: 'If you have any questions or concerns please reach out to us',
     };
-
+    console.log('on line 25 ',data);
     // Sending the email
     mailgun.messages().send(data, (error, body) => {
       if (error) {
